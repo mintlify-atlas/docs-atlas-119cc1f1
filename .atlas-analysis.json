@@ -1,0 +1,69 @@
+{
+  "projectType": "cli-tool",
+  "projectName": "Create Go App",
+  "projectDescription": "A CLI scaffolding tool for generating production-ready Go projects with composable optional features",
+  "theme": "aspen",
+  "primaryColor": "#00ADD8",
+  "lightColor": "#5DC9E2",
+  "darkColor": "#007D9C",
+  "navigation": {
+    "groups": [
+      {
+        "group": "Get Started",
+        "pages": [
+          "introduction",
+          "quickstart"
+        ]
+      },
+      {
+        "group": "Core Concepts",
+        "pages": [
+          "concepts/base-packages",
+          "concepts/features",
+          "concepts/feature-composition"
+        ]
+      },
+      {
+        "group": "Available Features",
+        "pages": [
+          "features/postgres",
+          "features/docker",
+          "features/httpclient",
+          "features/ci"
+        ]
+      },
+      {
+        "group": "Generated Project",
+        "pages": [
+          "generated/structure",
+          "generated/configuration",
+          "generated/development"
+        ]
+      },
+      {
+        "group": "Advanced",
+        "pages": [
+          "advanced/custom-features",
+          "advanced/templates",
+          "advanced/dependency-resolution"
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Interactive CLI with feature selection",
+    "Composable optional features (postgres, docker, httpclient, ci)",
+    "Automatic dependency resolution and conflict detection",
+    "Production-ready base packages (env, log, retry, worker, state, cycle, ptr)",
+    "Smart feature integration (e.g., postgres + docker automatically adds postgres service)",
+    "Generated projects include go.mod, Makefile, .env, and initial git commit"
+  ],
+  "publicApiSurface": [
+    "go run github.com/builderjarvis/create-go-app@latest [project-name]",
+    "scaffold.Register(f Feature)",
+    "scaffold.Generate(cfg Config)",
+    "scaffold.Resolve(selected []string)",
+    "Feature interface (Name, Description, Dependencies, Conflicts, Install)",
+    "Context methods (AddPackage, AddConfig, WriteTemplateDir)"
+  ]
+}
